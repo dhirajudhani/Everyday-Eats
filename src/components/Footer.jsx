@@ -24,7 +24,7 @@ const Footer = () => {
           </section>
           <div className="flex w-full relative flex-wrap justify-between">
             <div className="relative w-full max-w-32">
-              <h6 className='text-md space-x-1 space-y-1 font-semibold'>ABOUT Zaika</h6>
+              <h6 className='text-md space-x-1 space-y-1 font-semibold'>ABOUT US</h6>
               <nav>
                 <a href="#"><p>Who We Are</p></a>
                 <a href="#"><p>Blog</p></a>
@@ -35,13 +35,13 @@ const Footer = () => {
               </nav>
             </div>
             <div className="foot2">
-              <h6 className='font-semibold'>ZAIKAVERSE</h6>
+              <h6 className='font-semibold'>Everyday Eats VERSE</h6>
               <nav>
-                <a href="#"><p>Zaika</p></a>
+                <a href="#"><p>Everyday Eats</p></a>
                 <a href="#"><p>Ziakit</p></a>
                 <a href="#"><p>Feeding India</p></a>
                 <a href="#"><p>Hyperpure</p></a>
-                <a href="#"><p>Zaikaland</p></a>
+                <a href="#"><p>Everyday Eatsland</p></a>
               </nav>
             </div>
             <div className="foot3">
@@ -55,7 +55,7 @@ const Footer = () => {
               <div className="foot3-2">
                 <h6 className='font-semibold'>FOR ENTERPRISES</h6>
                 <nav>
-                  <a href="#"><p>Zaika For Enterprise</p></a>
+                  <a href="#"><p>Everyday Eats For Enterprise</p></a>
                 </nav>
               </div>
             </div>
@@ -94,7 +94,7 @@ const Footer = () => {
             </div>
           </div>
           <hr className="mt-12" />
-          <p className="copyright mt-6 text-sm">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy, and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zaika Ltd. All rights reserved.</p>
+          <p className="copyright mt-6 text-sm">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy, and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Everyday Eats Ltd. All rights reserved.</p>
         </div>
       </footer>
     </>
