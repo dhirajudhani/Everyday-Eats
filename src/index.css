@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+a p {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgb(105, 105, 105);
+    margin: 5px 0px;
+}
+
+.foot5 .icons a {
+    text-decoration: none;
+    margin-right: 8px;
+    font-size: 20px;
+}
+foot5 .icons {
+    display: flex;
+    justify-content: flex-start;
+    height: 22px;
+    width: 201px;
+}
+
+.copyright{
+    color: rgb(79, 79, 79);
+    line-height: 17px;
+}
