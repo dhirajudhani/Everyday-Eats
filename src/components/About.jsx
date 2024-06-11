@@ -1,9 +1,13 @@
-import React from 'react'
-import faqData from '../utils/faqData'
-const About = () => {
-  return (
-    <div>About</div>
-  )
-}
+import React from 'react';
 
-export default About
+const About = () => {
+  console.log('About component rendered');
+  return (
+    <div className='about-container'>
+      <h1>More about this project</h1>
+      <p>This is the About page content.</p>
+    </div>
+  );
+};
+
+export default About;

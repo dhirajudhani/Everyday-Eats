@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between shadow-lg z-10 items-center p-3 fixed w-full bg-white">
+    <div className="flex justify-between shadow-lg items-center p-3 fixed w-full bg-white top-0">
       <div className="flex items-center gap-5">
         <Link to="/">
           <img
@@ -80,7 +80,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="p-3 m-2 flex items-center gap-1.5 text-[#555] text-lg hover:text-[#F86603] cursor-pointer">
-            <Link className="text-lg" to={"/about"}>
+            <Link className="text-lg" to="/about">
               <span>
                 <i className="fa-brands fa-react"></i>
               </span>
@@ -130,7 +130,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="p-3 m-2 flex items-center gap-1.5 text-[#555] text-lg hover:text-[#F86603] cursor-pointer">
-                <Link className="text-lg" to={"/about"} onClick={toggleNavItems}>
+                <Link className="text-lg" to="/about" onClick={toggleNavItems}>
                   <span>
                     <i className="fa-brands fa-react"></i>
                   </span>

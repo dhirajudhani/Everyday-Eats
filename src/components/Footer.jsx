@@ -4,7 +4,7 @@ import logo from '../Images/logo.jpg';
 const Footer = () => {
   return (
     <>
-      <footer className='w-full bg-slate-50 flex justify-center'>
+      <footer className='w-full bg-slate-50 flex justify-center bottom-0'>
         <div className="max-w-6xl w-8/12 relative p-3">
           <section className="flex items-center justify-between w-full mb-8">
             <img src={logo} alt="" className='w-20 rounded-full' />
