@@ -4,14 +4,19 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="">
       <Header />
-      <div className="flex-grow">
-        <div className="container mx-auto flex justify-center items-center h-full">
+      {/* Apply styles to position Outlet below Header */}
+      <div className=" flex flex-grow  mt-36 mb-4 w-full">
+        <div className="container mx-auto flex justify-center items-center">
           <Outlet />
         </div>
       </div>
-      <Footer />
+      <div className=" flex flex-grow  w-full">
+        <div className="container mx-auto flex justify-center items-center">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }

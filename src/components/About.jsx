@@ -5,7 +5,7 @@ import FAQ from "./FAQ";
 const About = () => {
   const [showItems, setShowItems] = useState(0);
   return (
-    <div className="mx-4 md:mx-auto md:max-w-800">
+    <div className="w-full">  
       <h1 className="mx-4 font-bold text-4xl text-center">More about this project</h1>
       <div className="accordian">
         {faqData.map((data, index) => (

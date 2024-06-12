@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between shadow-lg items-center p-3 fixed w-full bg-white top-0">
+    <div className="flex justify-between shadow-lg z-10 items-center p-3 fixed w-full bg-white top-0">
       <div className="flex items-center gap-5">
         <Link to="/">
           <img
