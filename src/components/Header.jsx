@@ -82,7 +82,7 @@ const Header = () => {
           <li className="p-3 m-2 flex items-center gap-1.5 text-[#555] text-lg hover:text-[#F86603] cursor-pointer">
             <Link className="text-lg" to="/about">
               <span>
-                <i className="fa-brands fa-react"></i>
+                <i className="fa-solid fa-circle-info"></i>
               </span>
               About
             </Link>
