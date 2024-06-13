@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import OfflinePage from "./OfflinePage";
+import Shimmer from "./Shimmer";
+import toast from "react-hot-toast";
 
 const Body = () => {
   const [listOfRes, setListRes] = useState([]);
@@ -53,11 +55,103 @@ const Body = () => {
     console.log(title);
   };
 
-  const onlineStatus = useOnlineStatus()
+  const onlineStatus = useOnlineStatus();
 
-  if(onlineStatus === false) return <OfflinePage/>
+  if (onlineStatus === false) return <OfflinePage />;
 
-  return (<></>);
+  return listOfRes.length === 0 ? (
+    <Shimmer />
+  ) : (
+    <>
+      <div className="body">
+        <div className="filter">
+          <div className="search">
+            <input
+              className="search-box"
+              type="text"
+              placeholder="Search for restaurants, cusines"
+              value={searchText}
+              onChange={(e) => {
+                const searchTextValue = e.target.value.toLowerCase();
+                setSearchText(searchTextValue);
+
+                if (searchTextValue === "") {
+                  setfilteredRestaurant(listOfRes);
+                } else {
+                  const filteredList = listOfRes.filter((res) => {
+                    res.info.name.toLowerCase().includes(searchTextValue) ||
+                      res.info.cuisines.some((cuisine) => {
+                        cuisine.toLowerCase().includes(searchTextValue);
+                      });
+                  });
+
+                  setfilteredRestaurant(filteredList);
+                }
+              }}
+            />
+            <div
+              className="search-icon"
+              onClick={() => {
+                console.log(searchText);
+                setSearchText("");
+              }}
+            >
+              <i
+                className="fa-solid fa-magnifying-glass"
+                style={{ color: "#939393" }}
+              ></i>
+            </div>
+          </div>
+          <button
+            className="filter-btn"
+            onClick={() => {
+              setfilteredRestaurant(listOfRes);
+              console.log("clicked");
+              toast.success("All Restaurants are Loaded Successfully");
+            }}
+          >
+            All Restaurants
+          </button>
+          <button
+            className="filter-btn"
+            onClick={() => {
+              const filteredRes = listOfRes.filter((res) => {
+                res.info.avgRating > 4.3;
+              });
+              setfilteredRestaurant(filteredRes);
+              toast.success("Higly Rated Restaurants");
+            }}
+          >
+            Rating 4.3+
+          </button>
+          <button
+            className="filter-btn"
+            onClick={() => {
+              const filteredRes = listOfRes.filter((res) => {
+                res?.info?.veg === true
+              })
+              setfilteredRestaurant(filteredRes);
+              toast.success("Showing Pure Veg Restaurants");
+            }}
+          >
+            Pure Veg 
+          </button>
+          <button
+            className="filter-btn"
+            onClick={() => {
+              const filteredRes = listOfRes.filter((res) => {
+                res?.info?.sla?.deliveryTime <= 25
+              })
+              setfilteredRestaurant(filteredRes);
+              toast.success("Fast Delivery Restaurants");
+            }}
+          >
+            Fast Delivery 
+          </button>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Body;
