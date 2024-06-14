@@ -148,6 +148,42 @@ const Body = () => {
           >
             Fast Delivery 
           </button>
+          <button
+            className="filter-btn"
+            onClick={() => {  
+              const filteredRes = listOfRes.filter((res) => {
+                const costOfTwo = parseInt(
+                  res?.info?.costOfTwo
+                  .replace("₹", "")
+                  .replace(" for two", "")
+                  .trim()
+                )
+                return costOfTwo <= 300
+              })
+              setfilteredRestaurant(filteredRes);
+              toast.success("Budget-Friendly Restaurants Displayed");
+            }}
+          >
+            Less than ₹300
+          </button>
+          <button
+            className="filter-btn"
+            onClick={() => {  
+              const filteredRes = listOfRes.filter((res) => {
+                const costOfTwo = parseInt(
+                  res?.info?.costOfTwo
+                  .replace("₹", "")
+                  .replace(" for two", "")
+                  .trim()
+                )
+                return costOfTwo > 300 && costOfTwo <= 600
+              })
+              setfilteredRestaurant(filteredRes);
+              toast.success("Budget-Friendly Restaurants Displayed");
+            }}
+          >
+            Range: ₹300 - ₹600 
+          </button>
         </div>
       </div>
     </>
