@@ -3,6 +3,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import OfflinePage from "./OfflinePage";
 import Shimmer from "./Shimmer";
 import toast from "react-hot-toast";
+import logo from "../Images/no-results.png";
 
 const Body = () => {
   const [listOfRes, setListRes] = useState([]);
