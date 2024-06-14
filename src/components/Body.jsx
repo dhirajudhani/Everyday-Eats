@@ -3,7 +3,8 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import OfflinePage from "./OfflinePage";
 import Shimmer from "./Shimmer";
 import toast from "react-hot-toast";
-import logo from "../Images/no-results.png";
+import noresult from "../Images/no-results.png";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRes, setListRes] = useState([]);
@@ -65,10 +66,10 @@ const Body = () => {
   ) : (
     <>
       <div className="body">
-        <div className="filter">
-          <div className="search">
+        <div className="flex justify-center gap-5 ml-10">
+          <div className="border border-gray-200 rounded-[18px] justify-between items-center w-[250px] h-[45px] flex shadow-md overflow-hidden">
             <input
-              className="search-box"
+              className="w-full h-full p-3 rounded-lg focus:outline-none"
               type="text"
               placeholder="Search for restaurants, cusines"
               value={searchText}
@@ -91,7 +92,7 @@ const Body = () => {
               }}
             />
             <div
-              className="search-icon"
+              className="w-14 h-14 flex items-center justify-center text-lg cursor-pointer"
               onClick={() => {
                 console.log(searchText);
                 setSearchText("");
@@ -104,7 +105,7 @@ const Body = () => {
             </div>
           </div>
           <button
-            className="filter-btn"
+            className="text-[#111111] bg-white border border-[#e2e2e7] rounded-[18px] py-2 px-3 font-normal text-[14px] hover:bg-slate-200 cursor-pointer"
             onClick={() => {
               setfilteredRestaurant(listOfRes);
               console.log("clicked");
@@ -114,7 +115,7 @@ const Body = () => {
             All Restaurants
           </button>
           <button
-            className="filter-btn"
+            className="text-[#111111] bg-white border border-[#e2e2e7] rounded-[18px] py-2 px-3 font-normal text-[14px] hover:bg-slate-200 cursor-pointer"
             onClick={() => {
               const filteredRes = listOfRes.filter((res) => {
                 res.info.avgRating > 4.3;
@@ -126,7 +127,7 @@ const Body = () => {
             Rating 4.3+
           </button>
           <button
-            className="filter-btn"
+            className="text-[#111111] bg-white border border-[#e2e2e7] rounded-[18px] py-2 px-3 font-normal text-[14px] hover:bg-slate-200 cursor-pointer"
             onClick={() => {
               const filteredRes = listOfRes.filter((res) => {
                 res?.info?.veg === true
@@ -138,7 +139,7 @@ const Body = () => {
             Pure Veg 
           </button>
           <button
-            className="filter-btn"
+            className="text-[#111111] bg-white border border-[#e2e2e7] rounded-[18px] py-2 px-3 font-normal text-[14px] hover:bg-slate-200 cursor-pointer"
             onClick={() => {
               const filteredRes = listOfRes.filter((res) => {
                 res?.info?.sla?.deliveryTime <= 25
@@ -150,7 +151,7 @@ const Body = () => {
             Fast Delivery 
           </button>
           <button
-            className="filter-btn"
+            className="text-[#111111] bg-white border border-[#e2e2e7] rounded-[18px] py-2 px-3 font-normal text-[14px] hover:bg-slate-200 cursor-pointer"
             onClick={() => {  
               const filteredRes = listOfRes.filter((res) => {
                 const costOfTwo = parseInt(
@@ -168,7 +169,7 @@ const Body = () => {
             Less than ₹300
           </button>
           <button
-            className="filter-btn"
+            className="text-[#111111] bg-white border border-[#e2e2e7] rounded-[18px] py-2 px-3 font-normal text-[14px] hover:bg-slate-200 cursor-pointer"
             onClick={() => {  
               const filteredRes = listOfRes.filter((res) => {
                 const costOfTwo = parseInt(
@@ -185,6 +186,22 @@ const Body = () => {
           >
             Range: ₹300 - ₹600 
           </button>
+        </div>
+        <div className="Food-menu">
+          <h2 className="food-menu-title">{title}</h2>
+          {filteredRestaurant.length === 0 ? (
+            <div className="flex items-center justify-center m-40">
+              <img src={noresult} alt="Search results are finished, No Result Found" className="w-80" />
+            </div>
+          ):(
+            <div className="Food-card">
+              {filteredRestaurant.map((restaurant) => {
+                <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}>
+                  
+                </Link>
+              })}
+            </div>
+          )}
         </div>
       </div>
     </>
