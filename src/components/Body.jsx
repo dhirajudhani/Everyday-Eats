@@ -66,7 +66,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="body">
+      <div className="scroll-smooth">
         <div className="flex justify-center gap-5 ml-10">
           <div className="border border-gray-200 rounded-[18px] justify-between items-center w-[250px] h-[45px] flex shadow-md overflow-hidden">
             <input
@@ -195,7 +195,7 @@ const Body = () => {
               <img src={noresult} alt="Search results are finished, No Result Found" className="w-80" />
             </div>
           ):(
-            <div className="Food-card">
+            <div className="flex w-full flex-wrap">
               {filteredRestaurant.map((restaurant) => {
                 <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}>
                     <RestaurantCard resData={restaurant}/>
