@@ -5,6 +5,7 @@ import Shimmer from "./Shimmer";
 import toast from "react-hot-toast";
 import noresult from "../Images/no-results.png";
 import { Link } from "react-router-dom";
+import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
   const [listOfRes, setListRes] = useState([]);
@@ -197,7 +198,7 @@ const Body = () => {
             <div className="Food-card">
               {filteredRestaurant.map((restaurant) => {
                 <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}>
-                  
+                    <RestaurantCard resData={restaurant}/>
                 </Link>
               })}
             </div>
