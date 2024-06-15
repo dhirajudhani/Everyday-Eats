@@ -26,6 +26,8 @@ export default {
       },
       colors: {
         customGreen: 'rgb(36, 150, 63)',
+        custom: 'rgb(232, 232, 232)',
+        customPara: "rgb(130, 130, 130)"
       },
     },
   },
