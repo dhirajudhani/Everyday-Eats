@@ -18,7 +18,7 @@ const RestaurantCard = (props) => {
         <div className='p-2'>
             <span className='block relative cursor-pointer'>
                 <div className='rounded-[15px] cursor-pointer relative max-w-full w-[328.4px] h-[248px] overflow-hidden'>
-                    <img className='w-full h-full rounded-inherit object-cover transition-opacity transition-transform duration-250 ease' src={CDN_URL + cloudinaryImageId} alt="restaurant img" />
+                    <img className='w-full h-full rounded-inherit object-cover transition-opacity  duration-250 ease' src={CDN_URL + cloudinaryImageId} alt="restaurant img" />
                 </div>
                 <div className='off'>
                     <p>
@@ -30,10 +30,10 @@ const RestaurantCard = (props) => {
                     </p>
                 </div>
             </span>
-            <span className='Food-item-link'>
-                <div className='pname'>
-                    <h4>{name}</h4>
-                    <div className='rating'>
+            <span className='block relative cursor-pointer'>
+                <div className='flex justify-between text-[16px] leading-4'>
+                    <h4 className='leading-[1.2] mb-0 font-medium text-left text-base my-2 max-w-[80%] text-[rgb(28, 28, 28)]'>{name}</h4>
+                    <div className='flex items-center justify-center border border-customGreen bg-customGreen text-white text-xs rounded-[6px] h-[20px] w-[40px] my-[7.2px]'>
                         <p>{avgRating}</p>
                         <i className="fa-solid fa-star" style={{ color: "#ffffff" }} />
                     </div>

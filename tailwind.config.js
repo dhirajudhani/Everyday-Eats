@@ -24,6 +24,9 @@ export default {
       borderRadius: {
         'custom': '6px',
       },
+      colors: {
+        customGreen: 'rgb(36, 150, 63)',
+      },
     },
   },
   plugins: [],
