@@ -14,11 +14,11 @@ const RestaurantCard = (props) => {
       } = resData?.info;
 
   return (
-    <div className='Food-item'>
-        <div className='Food-item-margin'>
-            <span className='Food-item-link'>
-                <div className='card-img'>
-                    <img src={CDN_URL + cloudinaryImageId} alt="restaurant img" />
+    <div className='w-[350px] h-[400px] mr-4 mb-5 transition duration-200'>
+        <div className='p-2'>
+            <span className='block relative cursor-pointer'>
+                <div className='rounded-[15px] cursor-pointer relative max-w-full w-[328.4px] h-[248px] overflow-hidden'>
+                    <img className='w-full h-full rounded-inherit object-cover transition-opacity transition-transform duration-250 ease' src={CDN_URL + cloudinaryImageId} alt="restaurant img" />
                 </div>
                 <div className='off'>
                     <p>
