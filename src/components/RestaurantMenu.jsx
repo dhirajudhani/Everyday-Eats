@@ -8,7 +8,6 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const restInfo = useRestaurantMenu(resId);
-  console.log(restInfo);
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -18,15 +17,16 @@ const RestaurantMenu = () => {
     return <ResMenuShimmer />;
   }
 
-  console.log(restInfo);
+
   const resBasicInfo = restInfo?.cards.filter(
     (c) =>
       c?.card?.card?.["@type"] ===
       "type.googleapis.com/swiggy.presentation.food.v2.Restaurant"
   )[0].card.card.info;
-  console.log(resBasicInfo);
+  
 
   const categoryCards = restInfo?.cards.filter((c) => c.groupedCard);
+  
 
   const {
     name,
@@ -46,10 +46,9 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  console.log(categories);
 
   return (
-    <div className="menu-conatiner">
+    <div className="menu-conatiner w-full">
       <div className="menu-header">
         <div className="menu">
           <h3>{name}</h3>

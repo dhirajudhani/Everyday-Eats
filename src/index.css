@@ -34,3 +34,191 @@ foot5 .icons {
     object-fit: cover;
     transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
 }
+.menu-conatiner{
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 15px;
+  }
+
+  .menu-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .menu{
+    width: calc(100% - 120px);
+  }
+
+  .menu h3 {
+    font-size: 1.43rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+  }
+
+  .menu p {
+    font-size: .93rem;
+    color: #7e808c;
+    height: calc(.93rem + 6px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+    white-space: nowrap;
+  }
+
+  .rating{
+    border: 1px solid #e9e9eb;
+    box-shadow: 0 1px 5px #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px;
+    max-width: 100px;
+    float: right;
+  }
+
+  .rating-top {
+    display: flex;
+    align-items: center;
+    color: #3d9b6d;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9e9eb;
+    justify-content: center;
+  }
+
+  .rating span {
+    font-size: 11px;
+    color: #8b8d97;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+  }
+
+  .menu-price{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+  }
+
+  .menu-info{
+    font-size: 14px;
+    color: #7e808c;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+
+  .menu-price-constainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3e4152;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .menu-border{
+    border-top: 8px solid #f1f1f6;
+  }
+
+  .category-conatiner{
+    margin: 20px;
+  }
+
+  .category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .category-header h3 {
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .category-item .item-container:last-child{
+    border: none;
+  }
+
+  .item-container{
+    padding: 25px 0;
+    border-bottom: .5px solid #d3d3d3;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: calc(100% - 144px);
+  }
+
+  #veg-logo{
+    color: #0f8a65;
+  }
+
+  #nonveg-logo {
+    color: #e43b4f;
+  }
+
+  .item-info h3 {
+    margin-right: 4px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #3e4152;
+    word-break: break-word;
+  }
+
+  .item-info h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #3e4152;
+  }
+
+  .item-info p {
+    margin-top: 14px;
+    line-height: 1.3;
+    color: rgba(40,44,63,.45);
+    width: 95%;
+    letter-spacing: -.3px;
+    font-size: 14px;
+  }
+
+  .item-img {
+    position: relative;
+    height: 114px;
+  }
+
+  .item-img img {
+    width: 118px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .item-img button {
+    bottom: 5%;
+    position: absolute;
+    left: 11%;
+    padding: 7px 32px;
+    box-shadow: 0 3px 8px #e9e9eb;
+    border-radius: 4px;
+    color: #60b246;
+    background-color: #fff;
+    border: #60b246;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .menu-counter{
+    position: absolute;
+    bottom: 5%;
+    left: 11%;
+    box-shadow: 0 3px 8px #e9e9eb;
+    background-color: #fff;
+
+  }
