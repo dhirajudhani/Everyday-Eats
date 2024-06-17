@@ -10,6 +10,7 @@ const cartSlice = createSlice({
   reducers: {
     addItem: (state, action) => {
       if (state.restaurant === null) {
+
         state.restaurant = action.payload.resInfo;
         state.items.push({...action.payload.item, quantity: 1});
       } else if (state.restaurant.id != action.payload.resInfo.id) {
