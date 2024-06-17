@@ -29,14 +29,14 @@ export const ResMenuShimmer = () => {
       <div className="p-4 bg-gray-100">
         <div className="flex justify-between p-4 bg-white shadow-md rounded-md animate-shimmer">
           <div className="flex-1 space-y-2">
-            <div className="w-64 h-2 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
-            <div className="w-64 h-2 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
-            <div className="w-64 h-2 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
+            <div className="w-96 h-20 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
+            <div className="w-96 h-20 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
+            <div className="w-96 h-20 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
             <br />
-            <div className="w-64 h-2 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
-            <div className="w-64 h-2 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
+            <div className="w-96 h-20 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
+            <div className="w-96 h-20 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
           </div>
-          <div className="w-20 h-20 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
+          <div className="w-96 h-32 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
         </div>
         <div className="mt-4 p-4 bg-white shadow-md rounded-md animate-shimmer">
           <div className="w-2/5 h-2 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
@@ -57,7 +57,7 @@ export const ResMenuShimmer = () => {
                 <div className="w-1/4 h-2 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
                 <span className="block w-full h-12 mt-4 bg-shimmer bg-[length:200%_100%] rounded-md"></span>
               </div>
-              <div className="w-30 h-24 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
+              <div className="w-96 h-24 bg-shimmer bg-[length:200%_100%] rounded-md"></div>
             </div>
           ))}
         </div>
