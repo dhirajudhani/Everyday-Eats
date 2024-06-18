@@ -6,6 +6,10 @@
 
 Everyday Eats is a dynamic food delivery website created with the Swiggy API. It provides users with a seamless and interactive experience for discovering and ordering food from various restaurants.
 
+## Video 
+file:///home/ubuntu22/Videos/Screencasts/Screencast%20from%2018-06-24%2006:20:33%20PM%20IST.webm
+
+
 ## Live Project
 
 Explore Everyday Eats live: [Everyday Eats Live](https://everyday-eats-iota.vercel.app/)
