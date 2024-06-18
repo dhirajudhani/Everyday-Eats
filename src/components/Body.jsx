@@ -24,7 +24,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      'http://localhost:3000/api/restaurants?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING'
+      'https://everyday-eats-server.onrender.com/api/restaurants?lat=23.0343135&lng=72.52661049999999&page_type=DESKTOP_WEB_LISTING'
     );
     const json = await data.json();
     const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
@@ -38,7 +38,8 @@ const Body = () => {
   };
   const fetchMobileData = async () => {
     const mData = await fetch(
-      `https://zaika-server.vercel.app/mapi/restaurants?lat=${location.latitude}&lng=${location.longitude}`
+      'https://everyday-eats-server.onrender.com/api/restaurants?lat=23.0343135&lng=72.52661049999999&page_type=DESKTOP_WEB_LISTING'
+
     );
    
     const json = await mData.json();
