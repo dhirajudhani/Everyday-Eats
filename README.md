@@ -8,7 +8,7 @@ Everyday Eats is a dynamic food delivery website created with the Swiggy API. It
 
 ## Live Project
 
-Explore Everyday Eats live: [Everyday Eats Live](https://Everyday Eats-foods.onrender.com/)
+Explore Everyday Eats live: [Everyday Eats Live](https://everyday-eats-iota.vercel.app/)
 
 ## Key Features
 
