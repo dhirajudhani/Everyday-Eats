@@ -74,7 +74,7 @@ const Cart = () => {
     </div>
   ) : (
     <div className="cart">
-      <h3 className="cart-h3">Cart</h3>
+      <h3 className="cart-h3 font-bold text-xl text-center">Cart</h3>
       <div className="cart-container">
         <div className="cart-header">
           <div className="cart-header-content menu">
