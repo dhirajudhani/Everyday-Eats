@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import OfflinePage from "./OfflinePage";
 import Shimmer from "./Shimmer";
@@ -6,6 +6,8 @@ import toast from "react-hot-toast";
 import noresult from "../Images/no-results.png";
 import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
+import CityContext from "../utils/CityContext";
+import LocationContext from "../utils/LocationContext";
 
 
 const Body = () => {
@@ -13,14 +15,16 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [title, setTitle] = useState("");
+  const {location} = useContext(LocationContext);
+  const {setCity} = useContext(CityContext)
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [location]);
 
   const fetchData = async () => {
     const data = await fetch(
-      import.meta.env.VITE_API_URL
+      'http://localhost:3000/api/restaurants?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING'
     );
     const json = await data.json();
     const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
@@ -31,6 +35,22 @@ const Body = () => {
     setListRes(combinedRestaurants);
     setFilteredRestaurant(combinedRestaurants);
     setTitle(json?.data?.cards[1]?.card?.card?.header?.title || "Top restaurant chains");
+  };
+  const fetchMobileData = async () => {
+    const mData = await fetch(
+      `https://zaika-server.vercel.app/mapi/restaurants?lat=${location.latitude}&lng=${location.longitude}`
+    );
+   
+    const json = await mData.json();
+
+    setListOfRest(
+      json.data.success.cards[4].gridWidget.gridElements.infoWithStyle
+        .restaurants
+    );
+    setfilteredRestaurant(
+      json.data.success.cards[4].gridWidget.gridElements.infoWithStyle
+        .restaurants
+    );
   };
 
   const onlineStatus = useOnlineStatus();
