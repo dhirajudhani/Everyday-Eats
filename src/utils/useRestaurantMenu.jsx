@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { MENU_API } from "./constant";
+import LocationContext from "./LocationContext";
 
 const useRestaurantMenu = (resId) => {
     const [resInfo, setResInfo] = useState(null);
+    const {location} = useContext(LocationContext)
     // fetch the app data 
     useEffect(()=>{
         fetchData();
