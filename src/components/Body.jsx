@@ -7,6 +7,7 @@ import noresult from "../Images/no-results.png";
 import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 
+
 const Body = () => {
   const [listOfRes, setListRes] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
@@ -19,7 +20,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.0343135&lng=72.52661049999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      import.meta.env.VITE_API_URL
     );
     const json = await data.json();
     const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
